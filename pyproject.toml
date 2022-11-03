@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "poetry-handler"
+version = "0.1.0"
+description = ""
+authors = ["Orestis Gkorgkas <orestis.gorgas@gmail.com>"]
+
+packages = [{include = "s3_writer/src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.26.1"
+
+[tool.poetry.group.test]
+
+[tool.poetry.group.test.dependencies]
+pytest = "7.2.0"
+assertpy= "^1.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
