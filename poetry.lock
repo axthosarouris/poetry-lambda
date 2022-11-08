@@ -22,14 +22,14 @@ tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy 
 
 [[package]]
 name = "boto3"
-version = "1.26.1"
+version = "1.26.5"
 description = "The AWS SDK for Python"
 category = "main"
 optional = false
 python-versions = ">= 3.7"
 
 [package.dependencies]
-botocore = ">=1.29.1,<1.30.0"
+botocore = ">=1.29.5,<1.30.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.6.0,<0.7.0"
 
@@ -38,7 +38,7 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.29.1"
+version = "1.29.5"
 description = "Low-level, data-driven core of boto 3."
 category = "main"
 optional = false
@@ -62,7 +62,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7
 
 [[package]]
 name = "exceptiongroup"
-version = "1.0.0"
+version = "1.0.1"
 description = "Backport of PEP 654 (exception groups)"
 category = "dev"
 optional = false
@@ -70,6 +70,17 @@ python-versions = ">=3.7"
 
 [package.extras]
 test = ["pytest (>=6)"]
+
+[[package]]
+name = "faker"
+version = "15.3.1"
+description = "Faker is a Python package that generates fake data for you."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+python-dateutil = ">=2.4"
 
 [[package]]
 name = "iniconfig"
@@ -198,7 +209,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "10c7184ea405a99127f8986f666a11628a857a0860b3b640268dc716432e0db1"
+content-hash = "0fafd7f1646d5053207dad1aa9256be6425c647f18f984ed9d4c8359e322b1da"
 
 [metadata.files]
 assertpy = [
@@ -209,20 +220,24 @@ attrs = [
     {file = "attrs-22.1.0.tar.gz", hash = "sha256:29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"},
 ]
 boto3 = [
-    {file = "boto3-1.26.1-py3-none-any.whl", hash = "sha256:3b0fa19390895e664045713f2e47e63ad29c9f98b7bee6836dec7124953e48b8"},
-    {file = "boto3-1.26.1.tar.gz", hash = "sha256:9feb98e045736f943c2099d955415cfe44133e03d8e2d7581d2e5dc74d0ed064"},
+    {file = "boto3-1.26.5-py3-none-any.whl", hash = "sha256:7b6fb7b0346c239b53ad5e5fdf5eeef3c6452186d91239beeb66f106531cb2c3"},
+    {file = "boto3-1.26.5.tar.gz", hash = "sha256:cb4eca34b6e13e4ead46a68f66759feaae6bf5e97362b2c979b7b9f1d203715e"},
 ]
 botocore = [
-    {file = "botocore-1.29.1-py3-none-any.whl", hash = "sha256:75c65130ffab527d0a3d948c6d87eb8eac210e079e1ff2768c66484be57bb77c"},
-    {file = "botocore-1.29.1.tar.gz", hash = "sha256:e38b7cdce927cefabe45608dde61660b76458fba6624240dcdb6c4b8453d17f7"},
+    {file = "botocore-1.29.5-py3-none-any.whl", hash = "sha256:94e820994e731568d191373d622507fee6067c9e68b5a121aed46322fd6d3d45"},
+    {file = "botocore-1.29.5.tar.gz", hash = "sha256:8a1a074bce7567576947869d41026c45d507e00885f3890c1719180a9400ec40"},
 ]
 colorama = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
 exceptiongroup = [
-    {file = "exceptiongroup-1.0.0-py3-none-any.whl", hash = "sha256:2ac84b496be68464a2da60da518af3785fff8b7ec0d090a581604bc870bdee41"},
-    {file = "exceptiongroup-1.0.0.tar.gz", hash = "sha256:affbabf13fb6e98988c38d9c5650e701569fe3c1de3233cfb61c5f33774690ad"},
+    {file = "exceptiongroup-1.0.1-py3-none-any.whl", hash = "sha256:4d6c0aa6dd825810941c792f53d7b8d71da26f5e5f84f20f9508e8f2d33b140a"},
+    {file = "exceptiongroup-1.0.1.tar.gz", hash = "sha256:73866f7f842ede6cb1daa42c4af078e2035e5f7607f0e2c762cc51bb31bbe7b2"},
+]
+faker = [
+    {file = "Faker-15.3.1-py3-none-any.whl", hash = "sha256:4a3465624515a6807e8aa7e8eeb85bdd86a2fa53de4e258892dd6be95362462e"},
+    {file = "Faker-15.3.1.tar.gz", hash = "sha256:b9dd2fd9a9ac68a4e0c5040cd9e9bfaa099fa8dd15bae5f01f224a45431818d5"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
