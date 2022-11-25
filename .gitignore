@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm,visualstudiocode,python,linux,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm,visualstudiocode,python,linux,windows,macos
 
+.idea
 .aws-sam
 .pytest_cache
 ### Linux ###
