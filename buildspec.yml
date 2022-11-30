@@ -21,10 +21,13 @@ phases:
       - poetry run pytest
       - sam build
     post-build:
-      - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET
+      - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
 
 artifacts:
-  packaged.yml
+  files:
+    - packaged.yml
+  name: poetry-lambda-$(date +%Y-%m-%d)
+
 
 
 
