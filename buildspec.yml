@@ -29,7 +29,6 @@ phases:
 artifacts:
   files:
     - packaged.yml
-  name: poetry-lambda-$(date +%Y-%m-%d)
 
 
 
