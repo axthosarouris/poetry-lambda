@@ -16,15 +16,15 @@ phases:
       - curl -sSL https://install.python-poetry.org | python3 -
       - export PATH=$PATH:$HOME/.local/bin
       - apt-get install -y pip
-    build:
-      commands:
-        - poetry install
-        - poetry run pytest
-        - sam build
-    post_build:
-      commands:
-        - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
-        - echo "hello"
+  build:
+    commands:
+      - poetry install
+      - poetry run pytest
+      - sam build
+  post_build:
+    commands:
+      - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
+      - echo "hello"
 
 artifacts:
   files:
