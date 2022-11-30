@@ -22,11 +22,12 @@ phases:
       - sam build
     post-build:
       - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
+      - ls
 
-#artifacts:
-#  files:
-#    - packaged.yml
-#  name: poetry-lambda-$(date +%Y-%m-%d)
+artifacts:
+  files:
+    - packaged.yml
+  name: poetry-lambda-$(date +%Y-%m-%d)
 
 
 
