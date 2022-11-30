@@ -17,12 +17,13 @@ phases:
       - export PATH=$PATH:$HOME/.local/bin
       - apt-get install -y pip
     build:
-      - poetry install
-      - poetry run pytest
-      - sam build
+      commands:
+        - poetry install
+        - poetry run pytest
+        - sam build
     post-build:
-      - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
-      - echo "hello"
+        - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET --s3-prefix poetry-lambda-builds
+        - echo "hello
 
 artifacts:
   files:
