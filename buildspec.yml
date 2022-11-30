@@ -2,6 +2,8 @@ version: 0.2
 
 env:
   shell: bash
+  variables:
+    ARTIFACTS_BUCKET:
 
 phases:
   install:
@@ -17,5 +19,12 @@ phases:
     build:
       - poetry install
       - poetry run pytest
+      - sam build
+    post-build:
+      - sam package --output-template-file packaged.yml --s3-bucket $ARTIFACTS_BUCKET
+
+artifacts:
+  packaged.yml
+
 
 
