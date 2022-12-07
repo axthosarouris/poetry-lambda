@@ -13,6 +13,8 @@ phases:
       - echo "Install phase"
       - uname -a
       - apt-get update
+      - pyenv install 3.8.14
+      - pyenv local 3.8
       - python3 --version
       - curl -sSL https://install.python-poetry.org | python3 -
       - export PATH=$PATH:$HOME/.local/bin
